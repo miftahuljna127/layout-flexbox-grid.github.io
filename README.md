@@ -1,2 +1,2 @@
-# layout-flexbox-grid.github.io
+# Flexbox and Grid Layout
 Make layout use flexbox and grid
