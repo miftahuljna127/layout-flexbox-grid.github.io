@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+*, 
+*::before, 
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75); /* (paragraphs):*/
+  --very-light-gray: hsl(0, 0%, 95%); /*(background, headings, buttons): */
+
+  --fowe-regular: 400;
+  --fowe-bold: 700;
+
+  --fontfa-primary: 'Big Shoulders Display', cursive;
+  --fontfa-secondary: 'Lexend Deca', sans-serif;
+}
+
+li {
+  list-style: none;
+  display: inline;
+  padding: 10px;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: var(--fontfa-secondary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--transparent-white);
+}
+
+.container {
+  width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.wrapper {
+  display: flex;
+  border-radius: .5rem;
+  overflow: hidden;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-family: var(--fontfa-primary);
+  font-size: 2rem;
+  color: var(--very-light-gray);
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  color: var(--transparent-white);
+  line-height: 25px;
+  margin-bottom: 4rem;
+}
+
+.btn {
+  background-color: var(--very-light-gray);
+  border: 2px solid transparent;
+  padding: 12px 22px;
+  border-radius: 50px;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+.content {
+  padding: 35px;
+}
+
+.sedans {
+  background-color: var(--bright-orange);
+}
+
+.btn-sedans {
+  color: var(--bright-orange);
+}
+
+.suvs {
+  background-color: var(--dark-cyan);
+}
+
+.btn-suvs {
+  color: var(--dark-cyan);
+}
+
+.luxury {
+  background-color: var(--very-dark-cyan);
+}
+
+.btn-luxury {
+  color: var(--very-dark-cyan);
+}
+
+.btn-sedans:hover,
+.btn-suvs:hover,
+.btn-luxury:hover{
+  cursor: pointer;
+  color: var(--very-light-gray);
+  background-color: transparent;
+  border: 2px solid var(--very-light-gray);
+  overflow: hidden;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    height: calc(100vh - 90%);
+  }
+  
+  .container {
+    width: 375px;
+    margin: auto;
+  }
+
+  .wrapper {
+    flex-wrap: wrap;
+    max-width: 375px;
+  }
+
+  h1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: 2rem;
+  }
+}
